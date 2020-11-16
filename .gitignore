@@ -4,3 +4,6 @@
 # folder Target
 target/**
 
+# folder test-output
+test-output/**
+

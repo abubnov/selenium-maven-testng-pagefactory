@@ -13,5 +13,12 @@ public class SearchResultPageElements {
 	 public List<WebElement> getResultsElements() {
 		    return resultEements;
 	 }
+	 
+	 @FindBy(css = "#res .g")
+	  private List<WebElement> results;
+	 
+	 public List<WebElement> getResults() {
+		    return results;
+	 }
 
 }

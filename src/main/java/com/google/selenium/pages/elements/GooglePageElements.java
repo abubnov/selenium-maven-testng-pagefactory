@@ -8,5 +8,10 @@ public class GooglePageElements {
 	@FindBy(name = "q" )
 	public WebElement searchField;
 	
+	@FindBy(id = "introAgreeButton")
+    public WebElement agreeBtn;
+	
+	@FindBy(xpath = "//*[@id='cnsw']/iframe")
+    public WebElement googleFrame;	
 
 }
