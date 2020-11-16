@@ -1,0 +1,6 @@
+# folder .settings
+#.settings/**
+
+# folder Target
+target/**
+
