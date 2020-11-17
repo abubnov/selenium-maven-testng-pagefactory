@@ -36,9 +36,9 @@ public class GooglePage extends BasePage{
 	}
 
 
-	public SearchResultPage searchFunction(){	    	
+	public SearchResultPage searchFunction(String searchText){	    	
 		BasePage.wait4ElementClickable(googleElements.searchField, 10);
-		BasePage.enterText(googleElements.searchField,"bbc.com");		
+		BasePage.enterText(googleElements.searchField,searchText);		
 		BasePage.submitElement(googleElements.searchField);	
 		BasePage.pageLoad(20, TimeUnit.SECONDS);		
 		return PageFactory.initElements(driver, SearchResultPage.class);

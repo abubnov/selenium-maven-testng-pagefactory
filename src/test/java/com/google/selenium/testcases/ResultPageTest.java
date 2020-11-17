@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.google.selenium.framework.BaseTest;
 import com.google.selenium.framework.ListenerHelper;
+import com.google.selenium.framework.TestDate;
 import com.google.selenium.pages.actions.GooglePage;
 import com.google.selenium.pages.actions.SearchResultPage;
 
@@ -28,9 +29,9 @@ public class ResultPageTest extends BaseTest{
 
 
 	@Test
-	public void resultPageTest() {	
+	public void c() {	
 		LOGGER.info("-------> Started : ");
-		SearchResultPage searchresult = google.searchFunction();
+		SearchResultPage searchresult = google.searchFunction(TestDate.searchExistingCapitalText);
 		searchresult.validateSearchResult();
 		LOGGER.info("------->Finished : ");		
 	}

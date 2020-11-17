@@ -40,8 +40,6 @@ public class GooglePageTests extends BaseTest{
 	@Test
 	public void checkGmail() {	
 		LOGGER.info("-------> Started : ");
-		System.out.println("Gmail link is: " + google.googleElements.gmailLink.getAttribute("href"));
-		System.out.println("Gmail name is: " + google.googleElements.gmailLink.getText());
 		boolean gmailLinkPresent = google.googleElements.gmailLink.isDisplayed();		
 		AssertionHelper.verifyTrue(gmailLinkPresent);
 		AssertionHelper.verifyText(TestDate.gmailLinkName, google.googleElements.gmailLink.getText());
@@ -70,9 +68,9 @@ public class GooglePageTests extends BaseTest{
 
 
 	@Test
-	public void googleSearchTest() {
+	public void checkSearchWithExistingText() {
 		LOGGER.info("-------> Started : ");
-		SearchResultPage searchresult = google.searchFunction();					
+		SearchResultPage searchresult = google.searchFunction(TestDate.searchExistingText);					
 		searchresult.validateSearchResult();
 		LOGGER.info("------->Finished : ");
 	}
