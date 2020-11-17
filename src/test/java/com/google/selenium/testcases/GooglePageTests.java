@@ -5,7 +5,6 @@ package com.google.selenium.testcases;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -22,7 +21,7 @@ public class GooglePageTests extends BaseTest{
 	private static Logger LOGGER = LogManager.getLogger(GooglePageTests.class);
 	GooglePage google;
 
-	@BeforeTest
+	@BeforeClass
 	public void openHomePage() {
 		LOGGER.info("-------> Started : ");
 		google = new GooglePage();
@@ -39,20 +38,25 @@ public class GooglePageTests extends BaseTest{
 	}
 
 	@Test
-	public void checkGmailLinkIsDisplayed() {	
+	public void checkGmail() {	
 		LOGGER.info("-------> Started : ");
+		System.out.println("Gmail link is: " + google.googleElements.gmailLink.getAttribute("href"));
+		System.out.println("Gmail name is: " + google.googleElements.gmailLink.getText());
 		boolean gmailLinkPresent = google.googleElements.gmailLink.isDisplayed();		
-		AssertionHelper.verifyTrue(gmailLinkPresent);	
+		AssertionHelper.verifyTrue(gmailLinkPresent);
+		AssertionHelper.verifyText(TestDate.gmailLinkName, google.googleElements.gmailLink.getText());
+		AssertionHelper.verifyText(TestDate.gmailUrl, google.googleElements.gmailLink.getAttribute("href"));		
 		LOGGER.info("------->Finished : ");
 	}
 
 
 
 	@Test
-	public void checkGoogleAppsLinkIsDisplayed() {	
+	public void checkGoogleAppsLink() {	
 		LOGGER.info("-------> Started : ");
 		boolean googleAppsLinkPresent = google.googleElements.googleApps.isDisplayed();		
 		AssertionHelper.verifyTrue(googleAppsLinkPresent);	
+		AssertionHelper.verifyText(TestDate.gmailUrl, google.googleElements.googleApps.getAttribute("href"));
 		LOGGER.info("------->Finished : ");
 	}
 
@@ -69,7 +73,8 @@ public class GooglePageTests extends BaseTest{
 	public void googleSearchTest() {
 		LOGGER.info("-------> Started : ");
 		SearchResultPage searchresult = google.searchFunction();					
-		searchresult.validateSearchResult();						
+		searchresult.validateSearchResult();
+		LOGGER.info("------->Finished : ");
 	}
 
 
