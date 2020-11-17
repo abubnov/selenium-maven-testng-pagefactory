@@ -13,5 +13,13 @@ public class GooglePageElements {
 	
 	@FindBy(xpath = "//*[@id='cnsw']/iframe")
     public WebElement googleFrame;	
-
+	
+	@FindBy(xpath = "//*[text()='Gmail']")
+    public WebElement gmailLink;	
+		
+	@FindBy(xpath = "//*[@id='gbwa']/div/aXX")
+    public WebElement googleApps;	
+	
+	
+	
 }

@@ -29,7 +29,8 @@ public void handlingFrame() {
 			 BasePage.clickOnElement(googleElements.agreeBtn);
 			 //Switch back to browser	
 			 BasePage.switch2DefaultContent();
-			 System.out.println("Switch to browser");			
+			 System.out.println("Switch to browser");
+			 BasePage.pageLoad(20, TimeUnit.SECONDS);
 		}else {
 			System.out.println("iFrame is Invisible");
 		}			

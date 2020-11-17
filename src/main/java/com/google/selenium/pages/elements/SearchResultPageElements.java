@@ -20,5 +20,15 @@ public class SearchResultPageElements {
 	 public List<WebElement> getResults() {
 		    return results;
 	 }
+	 
+	 @FindBy(id = "logo")
+	 public WebElement googleLogo;
+	 
+	 @FindBy(id = "result-stats")
+	 public WebElement resultStats;
+	 
+	 @FindBy(xpath = "//*[text()='Page navigation']")
+	 public WebElement pageNavigation;
+		
 
 }

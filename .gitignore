@@ -7,3 +7,6 @@ target/**
 # folder test-output
 test-output/**
 
+# folder screenshots
+screenshots/**
+

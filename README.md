@@ -10,15 +10,18 @@ This maven templates is used for Selenium 3 and has the latest dependencies on N
 
 
 
-•	Download the zip or clone the Git repository
-•	Unzip the zip file (if you downloaded one).
-•	Open Command Prompt and Change directory (cd) to folder containing pom.xml
+*	Download the zip or clone the Git repository.
+
+*	Unzip the zip file (if you downloaded one).
+
+*	Open Command Prompt and Change directory (cd) to folder containing pom.xml.
 
 ```
 	cd selenium-maven-testng-pagefactory
 
 ```
-• 	Type from command line for running tests in
+
+* 	Type from command line for running tests in
 
 ```
 

@@ -35,11 +35,9 @@ public class BasePage {
 		driver.get(TestDate.homeUrl);
 	
 		driver.manage().window().maximize();		
-		implicitWait(TestDate.implicitWait, TimeUnit.SECONDS);
-		
-		//Validate title		
-		validatePageTitle(TestDate.homeTitle);
-						
+		implicitWait(TestDate.implicitWait, TimeUnit.SECONDS);	
+		BasePage.pageLoad(20, TimeUnit.SECONDS);
+								
 		return driver;
 	}
 	
@@ -100,11 +98,10 @@ public class BasePage {
  		driver.manage().timeouts().pageLoadTimeout(timeout, unit); 		
  	}  
      
+    //Validate title of page
      public static void validatePageTitle(String expectedTitle) {
-    	//Validate title
-    	 String actualTitle = getTitle();
- 		System.out.println("Actual Title is '" + actualTitle + "'");
- 		System.out.println("Expectedl Title is '" + expectedTitle + "'");
- 		Assert.assertEquals(expectedTitle, actualTitle);
+    	
+    	 String actualTitle = getTitle(); 		
+ 		AssertionHelper.verifyText(expectedTitle, actualTitle);
      }
 }
