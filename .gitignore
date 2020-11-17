@@ -10,3 +10,6 @@ test-output/**
 # folder screenshots
 screenshots/**
 
+# folder logs
+logs/**
+
