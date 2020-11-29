@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 
 import com.google.selenium.framework.BaseTest;
 import com.google.selenium.framework.ListenerHelper;
-import com.google.selenium.framework.TestDate;
 import com.google.selenium.pages.actions.GooglePage;
 import com.google.selenium.pages.actions.SearchResultPage;
+import com.google.selenium.utility.TestDate;
 
 @Listeners(ListenerHelper.class)
 public class ResultPageTest extends BaseTest{
@@ -29,7 +29,7 @@ public class ResultPageTest extends BaseTest{
 
 
 	@Test
-	public void c() {	
+	public void simpleSearch() {	
 		LOGGER.info("-------> Started : ");
 		SearchResultPage searchresult = google.searchFunction(TestDate.searchExistingCapitalText);
 		searchresult.validateSearchResult();

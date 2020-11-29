@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.google.selenium.framework.BasePage;
-import com.google.selenium.framework.TestDate;
 import com.google.selenium.pages.elements.SearchResultPageElements;
+import com.google.selenium.utility.TestDate;
 
 public class SearchResultPage extends BasePage{
 

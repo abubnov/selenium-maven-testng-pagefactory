@@ -12,9 +12,10 @@ import com.google.selenium.framework.AssertionHelper;
 import com.google.selenium.framework.BasePage;
 import com.google.selenium.framework.BaseTest;
 import com.google.selenium.framework.ListenerHelper;
-import com.google.selenium.framework.TestDate;
 import com.google.selenium.pages.actions.GooglePage;
 import com.google.selenium.pages.actions.SearchResultPage;
+import com.google.selenium.utility.Constant;
+import com.google.selenium.utility.TestDate;
 
 @Listeners(ListenerHelper.class)
 public class GooglePageTests extends BaseTest{
@@ -33,7 +34,7 @@ public class GooglePageTests extends BaseTest{
 	@Test
 	public void checkOpenedHomePage() {	
 		LOGGER.info("-------> Started : ");
-		BasePage.validatePageTitle(TestDate.homeTitle);	
+		BasePage.validatePageTitle(Constant.homeTitle);	
 		LOGGER.info("------->Finished : ");
 	}
 

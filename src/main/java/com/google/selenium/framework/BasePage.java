@@ -17,6 +17,8 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.google.selenium.utility.Constant;
+
 public class BasePage {
 
 	public static WebDriver driver;
@@ -25,17 +27,18 @@ public class BasePage {
 
 	public static WebDriver initConfiguration() {	
 
-		if(TestDate.browser.equals("firefox")){			
+		if(Constant.browser.equals("firefox")){			
 			driver = new FirefoxDriver();			
-		}else if(TestDate.browser.equals("chrome")){	
+		}else if(Constant.browser.equals("chrome")){	
 			driver = new ChromeDriver();
 			System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\webdrivers\\chromedriver.exe");
+			
 		}
 
-		driver.get(TestDate.homeUrl);
+		driver.get(Constant.homeUrl);
 
 		driver.manage().window().maximize();		
-		implicitWait(TestDate.implicitWait, TimeUnit.SECONDS);	
+		implicitWait(Constant.implicitWait, TimeUnit.SECONDS);	
 		BasePage.pageLoad(20, TimeUnit.SECONDS);
 
 		return driver;
